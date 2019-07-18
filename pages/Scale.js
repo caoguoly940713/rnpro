@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
-import { Alert, AppRegistry, Button, StyleSheet, View, Image } from 'react-native';
+import { Alert, AppRegistry, Button, StyleSheet, View, Image,Slider } from 'react-native';
 
 export default class ScaleView extends Component {
+
+	constructor(props){
+	 super(props);
+     this.state = { 
+			
+			iWidth:0,
+			iHeight:0
+      };
+	}
+
+	onSliderValueChange(douVal){
+
+		this.setState({
+				iWidth:200 * douVal,
+				iHeight:200 * douVal
+			})
+	}
 
 	render() {
 
 	    return (
 		    <View style = {styles.main}>
 
-		        <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
-		       		style = {{
-		       			width: 200,
-		       			height: 200
-		       		}} />
+		        <Image style = {{width: this.state.iWidth,height: this.state.iHeight}} 
+		        		source={{uri: 'https://reactjs.org/logo-og.png'}}/>
+		       		
 
+				<View style = {{ margin:20, width: 350 }}>
+		        <Slider
+		       		 onValueChange = { (douVal)=>this.onSliderValueChange(douVal) }
+		       		 />
+				</View>
 		      </View>
     );
   }

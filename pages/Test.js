@@ -12,8 +12,8 @@ constructor(props){
 
 changeStyle(){
  		var mystyle = JSON.stringify(this.state.mystyle);
-	var s1= JSON.stringify(styles.picture1);
-	var s2= JSON.stringify(styles.picture2);
+		var s1= JSON.stringify(styles.picture1);
+		var s2= JSON.stringify(styles.picture2);
 
 		if(mystyle==s1){
 			this.setState({
@@ -44,7 +44,7 @@ changeStyle(){
 
        <Button
        		title="change picture"
-       		onPress={() => this.changeStyle() 
+       		onPress={() => this.changeStyle()
        	 }
        ></Button>
 
