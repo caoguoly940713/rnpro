@@ -4,13 +4,16 @@ import { StackNavigator,createStackNavigator,createAppContainer } from 'react-na
 import ListView from "./pages/Movie";
 import BlinkView from "./pages/Blink";
 import ButtonView from "./pages/Button";
-
+import RNScrollView from "./pages/Scroll";
+import FlatListBase from "./pages/BaseList";
 
 
 var route = {
   Blinks: {screen: BlinkView},
   Lists: { screen: ListView},
-  Buttons: {screen: ButtonView}
+  Buttons: {screen: ButtonView},
+  Scrolls: {screen: RNScrollView},
+   BaseList: {screen: FlatListBase}
 }
 
 var config = {

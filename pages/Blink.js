@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
+export default class BlinkApp extends Component {
+
+  render() {
+    return (
+      <View>
+        <BlinkView text='I love to blink' />
+        <BlinkView text='Yes blinking is so great' />
+        <BlinkView text='Why did they ever take this out of HTML' />
+        <BlinkView text='Look at me look at me look at me' />
+      </View>
+    );
+  }
+}
+
+
 class BlinkView extends Component {
 
   constructor(props) {
@@ -22,23 +37,9 @@ class BlinkView extends Component {
     }
 
     return (
-      <Text>{this.props.text}
-      </Text>
+      <Text>{this.props.text}</Text>
     );
   }
 }
 
-export default class BlinkApp extends Component {
-
-  render() {
-    return (
-      <View>
-        <BlinkView text='I love to blink' />
-        <BlinkView text='Yes blinking is so great' />
-        <BlinkView text='Why did they ever take this out of HTML' />
-        <BlinkView text='Look at me look at me look at me' />
-      </View>
-    );
-  }
-}
 
