@@ -6,14 +6,17 @@ import BlinkView from "./pages/Blink";
 import ButtonView from "./pages/Button";
 import RNScrollView from "./pages/Scroll";
 import FlatListBase from "./pages/BaseList";
-
+import TestPage from "./pages/Test";
+import ScaleView from "./pages/Scale"
 
 var route = {
   Blinks: {screen: BlinkView},
   Lists: { screen: ListView},
   Buttons: {screen: ButtonView},
   Scrolls: {screen: RNScrollView},
-   BaseList: {screen: FlatListBase}
+   BaseList: {screen: FlatListBase},
+   Tests: {screen: TestPage},
+    Scales: {screen: ScaleView}
 }
 
 var config = {
@@ -24,10 +27,6 @@ const RootStack = createStackNavigator(route,config);
 const AppContainer = createAppContainer(RootStack);
 
 export default class Main extends Component {
-
-    constructor(props){
-        super(props);
-    }
 
   render() {
     return (

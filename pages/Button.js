@@ -4,10 +4,6 @@ import { Alert, AppRegistry, Button, StyleSheet, View } from 'react-native';
 
 export default class ButtonView extends Component {
 
-  _onPressButton() {
-    Alert.alert('You tapped the button!')
-  }
-
   render() {
    
     return (
@@ -22,7 +18,7 @@ export default class ButtonView extends Component {
           <Button
             onPress={() => this.props.navigation.navigate('Lists')}
             title="Lists"
-            color="#841584"></Button>
+            ></Button>
         </View>
 
         <View style={styles.buttonContainer}>
@@ -32,10 +28,24 @@ export default class ButtonView extends Component {
           </Button>
         </View>
 
-      <View style={styles.buttonContainer}>
+        <View style={styles.buttonContainer}>
           <Button
             onPress={() => this.props.navigation.navigate('BaseList')}
             title="BaseList">
+          </Button>
+          </View>
+
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={() => this.props.navigation.navigate('Tests')}
+            title="Tests">
+          </Button>
+          </View>
+
+          <View style={styles.buttonContainer}>
+          <Button
+            onPress={() => this.props.navigation.navigate('Scales')}
+            title="Scales">
           </Button>
           </View>
       </View>
@@ -51,12 +61,11 @@ const styles = StyleSheet.create({
    flexWrap: 'nowrap',
    justifyContent: 'center',
   },
+
+
   buttonContainer: {
     width: 300,
     margin: 20
   },
 
 })
-
-// skip this line if using Create React Native App
-// AppRegistry.registerComponent('rnpro', () => ButtonBasics);
